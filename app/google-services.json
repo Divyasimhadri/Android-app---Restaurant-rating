@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "711489788318",
+    "firebase_url": "https://restaurant-rating-e540e.firebaseio.com",
+    "project_id": "restaurant-rating-e540e",
+    "storage_bucket": "restaurant-rating-e540e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:711489788318:android:bc1ab28ea80093ec399e8f",
+        "android_client_info": {
+          "package_name": "com.example.restaurant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "711489788318-r5vdrpo90okob3etou1jhkcr4pompfgo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBV9P52GY868NY2eyRs3hJAkVH0HnWrLg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "711489788318-r5vdrpo90okob3etou1jhkcr4pompfgo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
