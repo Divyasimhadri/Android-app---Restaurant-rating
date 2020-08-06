@@ -69,19 +69,10 @@ public class signup extends AppCompatActivity {
                                         .setDisplayName(name).build();
                                 user.updateProfile(profileUpdates);
                                 Intent intent = new Intent(getApplicationContext(), rating.class);
-                                FirebaseAuth.getInstance().getCurrentUser().sendEmailVerification();
-                                if(FirebaseAuth.getInstance().getCurrentUser().isEmailVerified())
-                                {
+
                                     startActivity(intent);
                                     finish();
-                                }
-                                else
-                                {
-                                    Toast.makeText(getApplicationContext(),"Verify your account witha link sent to your email id",
-                                            Toast.LENGTH_LONG).show();
-                                    FirebaseAuth.getInstance().signOut();
-                                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                                }
+
 
 
                             } else {

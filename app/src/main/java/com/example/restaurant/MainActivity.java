@@ -47,23 +47,17 @@ public class MainActivity extends AppCompatActivity {
         String email = emailtextview.getText().toString();
         String password = pwdtextview.getText().toString();
 
-        Log.i("email", email);
-        Log.i("password", password);
         if (email.length() > 0 && password.length() > 0) {
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (mAuth.getCurrentUser().isEmailVerified()) {
-                                if (task.isSuccessful()) {
-                                    Toast.makeText(getApplicationContext(), "Login success", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(getApplicationContext(), rating.class);
-                                    startActivity(intent);
-                                } else {
-                                    Toast.makeText(getApplicationContext(), "Email/Password is invalid", Toast.LENGTH_SHORT).show();
-                                }
+                            if (task.isSuccessful()) {
+                                Toast.makeText(getApplicationContext(), "Login success", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getApplicationContext(), rating.class);
+                                startActivity(intent);
                             } else {
-                                Toast.makeText(getApplicationContext(), "Verify your Account", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Email/Password is invalid", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
